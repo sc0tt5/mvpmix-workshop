@@ -1,0 +1,13 @@
+<div *ngFor="let product of products | async">
+	<a [routerLink]="['/products', product.id]">{{product.name}}</a>
+	<div
+		*ngIf="product.coupon"
+		[title]="product.coupon + '%'">
+		{{product.coupon}} % off
+	</div>
+	<div (click)="greatDeal(product)">(click here)</div>
+	<app-comparison
+		[product]="product"
+		(interest)="logInterest(product)"></app-comparison>
+	<button (click)="cart.add(product)">Buy</button>
+</div>

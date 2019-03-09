@@ -1,0 +1,5 @@
+:host > div {
+    width: 300px;
+    margin: 16px;
+    border: 1px solid #ccc;
+}

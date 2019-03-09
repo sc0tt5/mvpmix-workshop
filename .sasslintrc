@@ -1,0 +1,35 @@
+{
+    "options": {
+        "max-warnings": 50
+    },
+    "rules": {
+        "class-name-format": [
+            0,
+            {
+                "convention":"hyphenatedbem",
+                "convention-explanation": "Your naming must match BEM, with exception of bootstrap classes",
+                "ignore": [
+                    "panel-group", "panel-default", "panel-body", "panel-title"
+                ]
+            }
+        ],
+        "no-warn": 0,
+        "no-debug": 0,
+        "no-css-comments": 0,
+        "property-sort-order":0,
+        "force-pseudo-nesting":0,
+        "force-element-nesting":0,
+        "no-important": 0,
+        "hex-notation": 0,
+        "nesting-depth":0,
+        "indentation": [
+            0,
+            {
+                "size": 4
+            }
+        ],
+        "no-color-literals":0,
+        "space-around-operator":false,
+        "no-transition-all":false
+    }
+}
