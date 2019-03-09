@@ -1,3 +1,11 @@
+### Note
+
+-   Final code from Angular workshop on March 8, 2019
+-   Instructor: Stephen Fluin from Google/Angular
+-   Location: The University of Texas at Dallas (UTD)
+-   Original repo: https://github.com/StephenFluin/2019-03-angular-workshop
+-   Slides: http://bit.ly/angular-mvpmix
+
 # Workshop
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.

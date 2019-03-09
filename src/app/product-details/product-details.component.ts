@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { switchMap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
+
+import { Product } from './../models/product.model';
 
 @Component({
     selector: 'app-product-details',
@@ -10,12 +12,16 @@ import { switchMap } from 'rxjs/operators';
 })
 export class ProductDetailsComponent implements OnInit {
     product;
+    products;
 
     constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
     ngOnInit() {
-        this.product = this.http
-            .get('/assets/products.json')
-            .pipe(switchMap(products => products[this.route.snapshot.params.id]));
+        this.products = this.http.get<Product[]>('/assets/products.json').pipe(
+            map((products: Product[]) => {
+                this.product = products[this.route.snapshot.params.id];
+                return this.product;
+            })
+        );
     }
 }
